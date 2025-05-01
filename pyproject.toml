@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netcheckdbg"
+version = "1.0.1"
+dependencies = [
+  "certifi==2025.4.26",
+  "charset-normalizer==3.4.1",
+  "colorama==0.4.6",
+  "dnspython==2.7.0",
+  "idna==3.10",
+  "netifaces==0.11.0",
+  "pythonping==1.1.4",
+  "requests==2.32.3",
+  "scapy==2.6.1",
+  "urllib3==2.4.0"
+]
+description = "Network checking tool"
+license = "MIT"
+
+[project.scripts]
+netcheckdbg = "netcheckdbg:main"
+
+[project.urls]
+Repository = "https://github.com/K1GOL/netcheckdbg"
