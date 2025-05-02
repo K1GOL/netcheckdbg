@@ -140,7 +140,7 @@ def check_interfaces() -> tuple[bool, list[str]]:
     # Get IPv4/IPv6 addresses
     addrs = netifaces.ifaddresses(iface)
     ip_addrs = addrs[netifaces.AF_INET] if netifaces.AF_INET in addrs else {}
-    ip_addrs = ip_addrs + addrs[netifaces.AF_INET] if netifaces.AF_INET6 in addrs else ip_addrs
+    ip_addrs = ip_addrs + addrs[netifaces.AF_INET6] if netifaces.AF_INET6 in addrs else ip_addrs
 
     # List addresses
     if len(ip_addrs) < 1:
